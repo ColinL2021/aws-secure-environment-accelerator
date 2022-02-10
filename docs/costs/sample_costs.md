@@ -18,5 +18,14 @@ Pricing represents reasonably steady state, minimal activity or traffic flows in
 | Lite Config – IPSEC VPN Firewall                       | Same as Full Config – Large IPSEC VPN Firewall w/Endpoints with the following changes: 1) Reduces the FortiGate instance sizes from c5n.2xl to c5n.xl (VM08 to VM04) in VPN option. 2) Only deploys the 9 required centralized Interface Endpoints (removes 50). All services remain accessible using the AWS public endpoints, but require traversing the perimeter firewalls. 3) Removes the perimeter VPC Interface Endpoints. 4) Removes the Unclass ou and VPC | $2,500                 |
 | Test Config                                            | Further reduces solution costs, while demonstrating full solution functionality (NOT recommended for production). Based on Lite Config – AWS Network Firewall.                                                                                                                                                                                                                                                                                                      | $1,500                 |
 | Full Config – Large IPSEC VPN Firewall w/Endpoints     | The full configuration file was based on feedback from customers moving into AWS at scale and at a rapid pace. Customers of this nature have indicated that they do not want to have to upsize their perimeter firewalls or add Interface endpoints as their developers start to use new AWS services. These are the two most expensive components of the deployed architecture solution.                                                                           | $3,700                 |
-|                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |                        |
-		
+
+
+**NOTE: Additional information on the sample config files can be found on Github here.
+
+Detailed Config Costs
+
+The following section provides detailed estimated costs for each of the AWS accounts and the services that are provisioned within the accounts. The examples below are based on the sample configuration files provided any modification to the configuration files may change the costs.
+
+Lite Config – IPSec VPN Firewall with Active/Active Fortinet cluster
+The Lite Config – IPSec VPN Firewall with Active/Active Fortinet cluster refers to the sample configuration file here. The estimated costs are presented in two formats. The first is broken down by cost per AWS Account and the second is by cost per AWS Service.
+
