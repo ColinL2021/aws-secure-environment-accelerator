@@ -102,8 +102,8 @@ Table 3: Lite Config – IPSEC VPN Firewall - Estimated Costs by AWS Service
 |                                           | 13,637 WriteRequestUnits                                                                                            |                        |
 | EC2 Container Registry (ECR)              | $0.10 per GB-month of data storage 1.425 GB-Mo                                                                      | $0.14                  |
 |                                           | 500MB-month Free Tier 0.500 GB-Mo                                                                                   |                        |
-| Elastic Compute Cloud                     | Amazon Elastic Compute Cloud NatGateway                                                                             | $647.93                |
-| (EC2)                                     | $0.05 per GB Data Processed by NAT Gateways x 0.000109 GB                                                           |                        |
+| Elastic Compute Cloud (EC2)               | Amazon Elastic Compute Cloud NatGateway                                                                             | $647.93                |
+|                                           | $0.05 per GB Data Processed by NAT Gateways x 0.000109 GB                                                           |                        |
 |                                           | $0.05 per NAT Gateway Hour x 744 Hrs                                                                                |                        |
 |                                           |                                                                                                                     |                        |
 |                                           |                                                                                                                     |                        |
