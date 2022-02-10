@@ -248,3 +248,187 @@ Table 4: Full Config – Large IPSEC VPN Firewall w/Endpoints - Estimated Costs 
 | TheFunAccount  | This is an optional sample workload account that is created in Sandbox organizational unit. Sandbox accounts used by development teams for proof of concept / prototyping work. These accounts are isolated at a network level and are not connected to the VPCs hosting development, test, and production workloads. These accounts have direct internet access via an internet gateway (IGW). They do not route through the Perimeter Security services VPC for internet access.                                                 | $75.35                 |
 |                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                        |
 | TOTAL          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | $3,686.01              |
+
+Table 5: Full Config – Large IPSEC VPN Firewall w/Endpoints - Estimated Costs by AWS Service
+
+| AWS Service                               | Quantity                                                                                                            | Estimated Monthly cost |
+| :---------------------------------------- | :------------------------------------------------------------------------------------------------------------------ | :--------------------- |
+| CloudTrail (All Regions)                  | AWS CloudTrail DataEventsRecorded (~2900 per region)                                                                | $27.93                 |
+|                                           | AWS CloudTrail InsightsEvents (~55,500 per region)                                                                  |                        |
+|                                           | AWS CloudTrail PaidEventsRecorded (~59,000 per region)                                                              |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | AWS CloudTrail DataEventsRecorded (~1,804,803 home region)                                                          |                        |
+|                                           | AWS CloudTrail InsightsEvents (~128,430 home region)                                                                |                        |
+|                                           | AWS CloudTrail PaidEventsRecorded (~207,211 home region)                                                            |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | AWS CloudTrail DataEventsRecorded                                                                                   |                        |
+|                                           | 0.000001 per data event recorded                                                                                    |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | AWS CloudTrail InsightsEvents                                                                                       |                        |
+|                                           | 0.0000035 per event analyzed                                                                                        |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | AWS CloudTrail PaidEventsRecorded                                                                                   |                        |
+|                                           | 0.00002 per paid event recorded                                                                                     |                        |
+| CloudWatch (All Regions)                  | Standard Logs (50GB)                                                                                                | $34.26                 |
+|                                           | $0.55 per GB log data ingested - Canada (Central)                                                                   |                        |
+| CloudWatch Events (All Regions)           | CloudWatch Events PutEvents                                                                                         | $0.00                  |
+|                                           | $1.00 per million EventBridge custom events received in Canada (Central)                                            |                        |
+|                                           | 374 64K-Chunks                                                                                                      |                        |
+| CodeBuild                                 | Build minutes on build.general1.medium - Canada (Central) 244 minutes x $0.01 Linux price per build minute          | $2.44                  |
+| CodeCommit                                | AWS CodeCommit User-Month                                                                                           | $0.00                  |
+|                                           | $0.00 for first 5 CodeCommit users x 3 User-Month                                                                   |                        |
+| CodePipeline                              | AWS CodePipeline CAN1-activePipeline                                                                                | $0.00                  |
+|                                           | $0.00 for first active pipeline x 1 pipelines                                                                       |                        |
+| Config (All Regions)                      | Number of Configuration items recorded (~600 per region)                                                            | $85.23                 |
+|                                           | Number of Config rule evaluations (~3000 per region)                                                                |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Number of Configuration items recorded (~2116 home region)                                                          |                        |
+|                                           | Number of Config rule evaluations (~8854 home region                                                                |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | $0.003 per Configuration Item recorded in Canada (Central) region                                                   |                        |
+|                                           | $0.001 for the first 100,000 evaluations in Canada (Central) region                                                 |                        |
+| Data Transfer                             | Bandwidth                                                                                                           | $0.00                  |
+|                                           | $0.000 per GB - data transfer in per month x 0.108 GB                                                               |                        |
+|                                           | $0.000 per GB - data transfer out under the monthly global free tier x 0.011 GB                                     |                        |
+|                                           | $0.000 per GB - regional data transfer under the monthly global free tier x 1.000 GB                                |                        |
+|                                           | $0.010 per GB - regional data transfer - in/out/between EC2 AZs or using elastic IPs or ELB x 0.091 GB              |                        |
+| Directory Service                         | AWS Directory Service (Enterprise Edition) Hourly                                                                   | $443.80                |
+|                                           | 2 domain controllers x 744 hours in a month x 0.208 USD                                                             |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | 1 shared directories x 2 additional accounts per shared directory x 744 hours in a month x 0.0624 USD               |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Small AD connector                                                                                                  |                        |
+|                                           | 1 directories x 744 hours in a month x 0.0557 USD                                                                   |                        |
+| DynamoDB                                  | $0.275 per million read request units (Canada (Central))                                                            | $0.02                  |
+|                                           | 10,784.500 ReadRequestUnits                                                                                         |                        |
+|                                           | $1.375 per million write request units (Canada (Central))                                                           |                        |
+|                                           | 13,637 WriteRequestUnits                                                                                            |                        |
+| EC2 Container Registry (ECR)              | $0.10 per GB-month of data storage 1.425 GB-Mo                                                                      | $0.14                  |
+|                                           | 500MB-month Free Tier 0.500 GB-Mo                                                                                   |                        |
+| Elastic Compute Cloud (EC2)               | Amazon Elastic Compute Cloud NatGateway                                                                             | $999.10                |
+|                                           | $0.05 per GB Data Processed by NAT Gateways x 0.000109 GB                                                           |                        |
+|                                           | $0.05 per NAT Gateway Hour x 744 Hrs                                                                                |                        |
+|                                           |                                                                                                                     |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Remote Desktop Gateway (1)                                                                                          |                        |
+|                                           | $0.1204 per On Demand Windows t3.large Instance Hour 744 Hrs                                                        |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Rsyslog Servers (2)                                                                                                 |                        |
+|                                           | $0.0928 per On Demand Linux t3.large Instance Hour 1488 Hrs                                                         |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Fortinet Firewalls (2)                                                                                              |                        |
+|                                           | $0.472 per On Demand Linux c5n.2xlarge Instance Hour 744 Hrs                                                        |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | EBS                                                                                                                 |                        |
+|                                           | 30 GB x 0.11 USD x 3 instances                                                                                      |                        |
+|                                           | 100 GB x 0.11 USD x 2 instances                                                                                     |                        |
+| Elastic Load Balancing                    | Elastic Load Balancing - Application                                                                                | $55.24                 |
+|                                           | $0.02475 per Application LoadBalancer-hour (or partial hour) x 2 Elastic Load Balancers x 744 Hrs                   |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Elastic Load Balancing – Network                                                                                    |                        |
+|                                           | Network Load balancer to front rsyslog servers                                                                      |                        |
+|                                           | $0.02475 per Network LoadBalancer-hour (or partial hour) x 744                                                      |                        |
+| Glue                                      | AWS Glue Storage                                                                                                    | $0.00                  |
+|                                           | $0 for AWS Glue Data Catalog storage under the free tier x                                                          |                        |
+|                                           | 2.000002 Obj-Month                                                                                                  |                        |
+| GuardDuty (All Regions)                   | Number of CloudTrail event analyzed (~500,000 per region)                                                           | $42.33                 |
+|                                           | Number of S3 Data Event for the first 500000000 events / month analyzed (~2,743 per region)                         |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Number of CloudTrail event analyzed (~957,015 in home region)                                                       |                        |
+|                                           | Number of S3 Data Event for the first 500000000 events / month analyzed (~1,571,352 in home region)                 |                        |
+| Key Management Service (All Regions)      | Number of keys per region(1)                                                                                        | $38.12                 |
+|                                           | Number of keys home region(21)                                                                                      |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | $1 per customer managed KMS key version                                                                             |                        |
+|                                           | $0.03 per 10000 KMS requests x ~360000 Requests                                                                     |                        |
+| Kinesis                                   | Amazon Kinesis PutRequest                                                                                           | $12.79                 |
+|                                           | $0.0154 per 1 million payload units                                                                                 |                        |
+|                                           | 9,563,720 PutRequest                                                                                                |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Amazon Kinesis shardHourStorage                                                                                     |                        |
+|                                           | $0.0165 per provisioned shard-hour x 744 ShardHour                                                                  |                        |
+| Kinesis Firehose                          | Amazon Kinesis Firehose GetKinesisRecords                                                                           | $5.10                  |
+|                                           | Tier 1 $0.032 per GB of data read from Kinesis Data Streams x 159.487 GB                                            |                        |
+| Lambda (All Regions)                      | AWS Lambda CAN1-Lambda-GB-Second                                                                                    | $0.00                  |
+|                                           | AWS Lambda - Compute Free Tier - 400,000 GB-Seconds - Canada (Central)                                              |                        |
+|                                           | 12,277.800 Lambda-GB-Second                                                                                         |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | AWS Lambda CAN1-Request                                                                                             |                        |
+|                                           | AWS Lambda - Requests Free Tier - 1,000,000 Requests - Canada (Central)                                             |                        |
+|                                           | 163,997 Request                                                                                                     |                        |
+| Macie (All Regions)                       | Operations (18 S3 buckets)                                                                                          | $3.38                  |
+|                                           | Dev (1 S3 bucket)                                                                                                   |                        |
+|                                           | Perimeter (1 S3 bucket)                                                                                             |                        |
+|                                           | Log Archive (2 S3 buckets)                                                                                          |                        |
+|                                           | Security (1 S3 bucket)                                                                                              |                        |
+|                                           | SharedNetwork (1 S3 bucket)                                                                                         |                        |
+|                                           | Management (8 S3 buckets)                                                                                           |                        |
+|                                           | TheFunAccount (1 S3 bucket)                                                                                         |                        |
+|                                           | 33 buckets in total.                                                                                                |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Amazon Macie PaidDataInventoryEvaluation                                                                            |                        |
+|                                           | $0.0033 per S3 Bucket analyzed daily in all regions x 31 Bucket-days x 33 buckets                                   |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Amazon Macie PaidDataInventoryEvaluation                                                                            |                        |
+|                                           | $0.0033 per S3 Bucket analyzed daily in home region                                                                 |                        |
+|                                           | 496 Bucket-days                                                                                                     |                        |
+| Route 53                                  | Canada                                                                                                              | $388.60                |
+|                                           | Amazon Route 53 CAN1-DNS-Queries                                                                                    |                        |
+|                                           | $0.40 per 1,000,000 resolver queries for the first 1 Billion queries x 11,767 Queries                               |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Amazon Route 53 CAN1-ResolverNetworkInterface                                                                       |                        |
+|                                           | $0.125 per hour per Resolver Network Interface x 2,976 Hrs                                                          |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Global                                                                                                              |                        |
+|                                           | Amazon Route 53 HostedZone                                                                                          |                        |
+|                                           | $0.50 per Hosted Zone for the first 25 Hosted Zones x 25 HostedZone                                                 |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | $0.10 per Hosted Zone for additional Hosted Zones x 41 HostedZone                                                   |                        |
+| Secrets Manager                           | AWS Secrets Manager CAN1-AWSSecretsManager-Secrets                                                                  | $5.21                  |
+|                                           | $0.40 per Secret x 13 Secrets                                                                                       |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | AWS Secrets Manager CAN1-AWSSecretsManagerAPIRequest                                                                |                        |
+|                                           | $0.05 per 10000 API Requests x 2,096 API Requests                                                                   |                        |
+| Security Hub (All Regions)                | Number of Security Checks (~4500 per region)                                                                        | $83.66                 |
+|                                           | Number of Security Checks (~10000 home region)                                                                      |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | The first 100,000 security checks per account per region per month cost USD0.001 per check x 10,552 Security Checks |                        |
+| Simple Notification Service (All regions) | Amazon Simple Notification Service CAN1-DeliveryAttempts-SMTP                                                       | $0.00                  |
+|                                           | First 1,000 Amazon SNS Email/Email-JSON Notifications per month are free x 413 Notifications                        |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Amazon Simple Notification Service CAN1-Requests-Tier1                                                              |                        |
+|                                           | First 1,000,000 Amazon SNS API Requests per month are free x 925 Requests                                           |                        |
+| Simple Queue Service (All Regions)        | Amazon Simple Queue Service CAN1-Requests-Tier1                                                                     | $0.00                  |
+|                                           | First 1,000,000 Amazon SQS Requests per month are free x 420 Requests                                               |                        |
+| Simple Storage Service (All regions)      | Amazon Simple Storage Service CAN1-Requests-Tier1                                                                   | $11.56                 |
+|                                           | $0.0055 per 1,000 PUT, COPY, POST, or LIST requests x 1,315,888 Requests                                            |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Amazon Simple Storage Service CAN1-Requests-Tier2                                                                   |                        |
+|                                           | $0.00 per request - GET and all other requests under the monthly global free tier x 12,645 Requests                 |                        |
+|                                           | $0.0044 per 10,000 GET and all other requests x 339,715 Requests                                                    |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Amazon Simple Storage Service CAN1-StorageAnalytics-ObjCount                                                        |                        |
+|                                           | $0.10 per 1 million objects monitored in S3 Analytics x 6,126,420.516 Objects                                       |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | Amazon Simple Storage Service CAN1-TimedStorage-ByteHrs                                                             |                        |
+|                                           | $0.000 per GB - storage under the monthly global free tier x 4.259 GB-Mo                                            |                        |
+|                                           | $0.025 per GB - first 50 TB / month of storage used x 98.167 GB-Mo                                                  |                        |
+| Step Functions                            | AWS Step Functions CAN1-StateTransition                                                                             | $0.67                  |
+|                                           | $0 for first 4,000 state transitions x 4,000 StateTransitions                                                       |                        |
+|                                           | $0.000025 per state transition x 26,775 StateTransitions                                                            |                        |
+| Systems Manager                           | AWS Systems Manager CAN1-PS-Param-Processed-Tier2                                                                   | $0.00                  |
+|                                           | $0.000005 per Parameter API Interaction_Higher throughput in Canada (Central) x 372 API Request                     |                        |
+| Virtual Private Cloud                     | $0.01 per GB for upto 1 PB monthly data processed by VPC Endpoints x 2.993 GB                                       | $1,446.43              |
+|                                           |                                                                                                                     |                        |
+|                                           | $0.011 per VPC Endpoint Hour x 92,256 Hrs                                                                           |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | $0.02 per GB Data Processed by Transit Gateway VPC Attachment x 2.999 GigaBytes                                     |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | $0.02 per GB Data Processed by Transit Gateway VPN Attachment x 0.016 GigaBytes                                     |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | $0.05 per VPN Connection-Hour x 1488 Hrs (2)                                                                        |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | $0.06 per Transit Gateway VPC Attachment Hour x 4464 hour (5)                                                       |                        |
+|                                           |                                                                                                                     |                        |
+|                                           | $0.06 per Transit Gateway VPN Attachment Hour x 1488 hour (2)                                                       |                        |
+| TOTAL                                     |                                                                                                                     | $3,686.01              |
