@@ -6,11 +6,11 @@ You are responsible for the cost of the AWS services used in deploying this solu
     - [1.1.1. Table 1: Sample Configurations Estimated Monthly Cost](#111-table-1-sample-configurations-estimated-monthly-cost)
   - [1.2. Detailed Config Costs](#12-detailed-config-costs)
     - [1.2.1. Lite Config – IPSec VPN Firewall with Active/Active Fortinet cluster](#121-lite-config--ipsec-vpn-firewall-with-activeactive-fortinet-cluster)
-    - [1.2.2. Table 2: Lite Config – IPSEC VPN Firewall - Estimated Costs by Account](#122-table-2-lite-config--ipsec-vpn-firewall---estimated-costs-by-account)
-    - [1.2.3. Table 3: Lite Config – IPSEC VPN Firewall - Estimated Costs by AWS Service](#123-table-3-lite-config--ipsec-vpn-firewall---estimated-costs-by-aws-service)
-  - [1.3. Full Config – Large IPSEC VPN Firewall w/Endpoints](#13-full-config--large-ipsec-vpn-firewall-wendpoints)
-    - [1.3.1. Table 4: Full Config – Large IPSEC VPN Firewall w/Endpoints - Estimated Costs by Account](#131-table-4-full-config--large-ipsec-vpn-firewall-wendpoints---estimated-costs-by-account)
-    - [1.3.2. Table 5: Full Config – Large IPSEC VPN Firewall w/Endpoints - Estimated Costs by AWS Service](#132-table-5-full-config--large-ipsec-vpn-firewall-wendpoints---estimated-costs-by-aws-service)
+      - [1.2.1.1. Table 2: Lite Config – IPSEC VPN Firewall - Estimated Costs by Account](#1211-table-2-lite-config--ipsec-vpn-firewall---estimated-costs-by-account)
+      - [1.2.1.2 Table 3: Lite Config – IPSEC VPN Firewall - Estimated Costs by AWS Service](#1212-table-3-lite-config--ipsec-vpn-firewall---estimated-costs-by-aws-service)
+    - [1.2.2. Full Config – Large IPSEC VPN Firewall w/Endpoints](#122-full-config--large-ipsec-vpn-firewall-wendpoints)
+      - [1.2.2.1. Table 4: Full Config – Large IPSEC VPN Firewall w/Endpoints - Estimated Costs by Account](#1221-table-4-full-config--large-ipsec-vpn-firewall-wendpoints---estimated-costs-by-account)
+      - [1.2.2.2. Table 5: Full Config – Large IPSEC VPN Firewall w/Endpoints - Estimated Costs by AWS Service](#1222-table-5-full-config--large-ipsec-vpn-firewall-wendpoints---estimated-costs-by-aws-service)
 
 
 
@@ -44,7 +44,7 @@ The following section provides detailed estimated costs for each of the AWS acco
 ### 1.2.1. Lite Config – IPSec VPN Firewall with Active/Active Fortinet cluster
 The Lite Config – IPSec VPN Firewall with Active/Active Fortinet cluster refers to the sample configuration file here. The estimated costs are presented in two formats. The first is broken down by cost per AWS Account and the second is by cost per AWS Service.
 
-### 1.2.2. Table 2: Lite Config – IPSEC VPN Firewall - Estimated Costs by Account
+#### 1.2.1.1. Table 2: Lite Config – IPSEC VPN Firewall - Estimated Costs by Account
 
 | AWS Account    | Quantity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Estimated Monthly cost |
 | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------- |
@@ -59,7 +59,7 @@ The Lite Config – IPSec VPN Firewall with Active/Active Fortinet cluster refer
 |                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                        |
 | TOTAL          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | $2,449.16              |
 
-### 1.2.3. Table 3: Lite Config – IPSEC VPN Firewall - Estimated Costs by AWS Service
+#### 1.2.1.2 Table 3: Lite Config – IPSEC VPN Firewall - Estimated Costs by AWS Service
 
 | AWS service                               | Quantity                                                                                                            | Estimated Monthly cost |
 | :---------------------------------------- | :------------------------------------------------------------------------------------------------------------------ | :--------------------- |
@@ -244,10 +244,10 @@ The Lite Config – IPSec VPN Firewall with Active/Active Fortinet cluster refer
 | TOTAL                                     |                                                                                                                     | $2,449.16              |
 
 
-## 1.3. Full Config – Large IPSEC VPN Firewall w/Endpoints
+### 1.2.2. Full Config – Large IPSEC VPN Firewall w/Endpoints
 The Full Config refers to the sample configuration file here. The estimated costs are presented in two formats. The first is broken down by cost per AWS Account and the second is by cost per AWS Service. 
 
-### 1.3.1. Table 4: Full Config – Large IPSEC VPN Firewall w/Endpoints - Estimated Costs by Account
+#### 1.2.2.1. Table 4: Full Config – Large IPSEC VPN Firewall w/Endpoints - Estimated Costs by Account
 
 | AWS Account    | Quantity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Estimated Monthly cost |
 | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------- |
@@ -262,7 +262,7 @@ The Full Config refers to the sample configuration file here. The estimated cost
 |                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                        |
 | TOTAL          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | $3,686.01              |
 
-### 1.3.2. Table 5: Full Config – Large IPSEC VPN Firewall w/Endpoints - Estimated Costs by AWS Service
+#### 1.2.2.2. Table 5: Full Config – Large IPSEC VPN Firewall w/Endpoints - Estimated Costs by AWS Service
 
 | AWS Service                               | Quantity                                                                                                            | Estimated Monthly cost |
 | :---------------------------------------- | :------------------------------------------------------------------------------------------------------------------ | :--------------------- |
