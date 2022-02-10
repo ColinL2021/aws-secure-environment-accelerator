@@ -35,7 +35,7 @@ Pricing represents reasonably steady state, minimal activity or traffic flows in
 | Full Config – Large IPSEC VPN Firewall w/Endpoints     | The full configuration file was based on feedback from customers moving into AWS at scale and at a rapid pace. Customers of this nature have indicated that they do not want to have to upsize their perimeter firewalls or add Interface endpoints as their developers start to use new AWS services. These are the two most expensive components of the deployed architecture solution.                                                                           | $3,700                 |
 
 
-**NOTE: Additional information on the sample config files can be found on Github here.
+**NOTE:** Additional information on the sample config files can be found on Github here.
 
 ## 1.2. Detailed Config Costs
 
